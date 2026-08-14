@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ZeroVocab</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>lexi</h1>
+            <div id="stats">Cargando progreso...</div>
+        </header>
+
+        <main>
+            <!-- Configuración de API Key -->
+            <section id="config-section">
+                <input
+                    type="password"
+                    id="api-key-input"
+                    placeholder="Tu API Key de Groq"
+                />
+                <button id="btn-guardar-key">Guardar Key</button>
+            </section>
+
+            <!-- Zona de Palabras -->
+            <section class="word-board">
+                <h3>Palabras sugeridas:</h3>
+                <div id="word-container"></div>
+            </section>
+
+            <!-- Zona de Escritura -->
+            <section class="typing-area">
+                <textarea
+                    id="user-input"
+                    rows="4"
+                    placeholder="Escribe una frase usando las palabras..."
+                ></textarea>
+                <button id="btn-enviar">Revisar Frase</button>
+            </section>
+
+            <!-- Resultados y Feedback de la IA -->
+            <section id="feedback-area" class="oculto">
+                <h3>Resultado de la ronda:</h3>
+                <p>
+                    <strong>Palabras cazadas:</strong>
+                    <span id="palabras-cazadas"></span>
+                </p>
+                <div id="ia-feedback"></div>
+            </section>
+
+            <!-- Modal / Tarjeta de Definición de Palabra -->
+            <div id="modal-significado" class="modal oculto">
+                <div class="modal-contenido">
+                    <button id="btn-cerrar-modal" class="btn-cerrar">
+                        &times;
+                    </button>
+                    <h3 id="modal-palabra">Palabra</h3>
+                    <p>
+                        <strong>Inglés:</strong>
+                        <span id="modal-traduccion"></span>
+                    </p>
+                    <p>
+                        <strong>Significado:</strong>
+                        <span id="modal-definicion"></span>
+                    </p>
+                    <p>
+                        <strong>Ejemplo:</strong>
+                        <span id="modal-ejemplo"></span>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Importamos el main.js como módulo -->
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>
