@@ -13,15 +13,21 @@ Lexi es una aplicación web para aprender y repasar vocabulario construyendo fra
 
 ## Estructura de Archivos
 
+## Estructura de Archivos
+
+```text
 lexi/
 ├── index.html           Interfaz de usuario
-├── css/style.css        Estilos visuales
-├── data/vocabulario.json Lista de palabras
+├── css/
+│   └── style.css        Estilos visuales
+├── data/
+│   └── vocabulario.json Lista de palabras
 ├── js/
 │   ├── main.js          Controlador principal
 │   ├── game.js          Lógica de palabras y progreso
 │   ├── api.js           Llamadas a la API de Groq
 │   └── storage.js       Persistencia en localStorage
 └── README.md            Documentación
+```
 
 
